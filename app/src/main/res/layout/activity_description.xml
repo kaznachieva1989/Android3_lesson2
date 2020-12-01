@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DescriptionActivity">
+
+    <TextView
+        android:id="@+id/idFilm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title" />
+
+    <TextView
+        android:id="@+id/titleFilm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title" />
+
+    <TextView
+        android:id="@+id/directorFilm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description" />
+
+    <TextView
+        android:id="@+id/release_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Deadline" />
+
+</LinearLayout>
