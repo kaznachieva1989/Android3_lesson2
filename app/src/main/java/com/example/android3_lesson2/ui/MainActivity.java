@@ -21,7 +21,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements FilmAdapter.FilmCallBack {
 
-    int position;
     FilmViewModel filmViewModel;
     RecyclerView recyclerView;
     FilmAdapter filmAdapter;
@@ -43,24 +42,16 @@ public class MainActivity extends AppCompatActivity implements FilmAdapter.FilmC
             @Override
             public void onChanged(List<Film> films) {
                 filmAdapter.setList(films);
+                filmList.clear();
+                filmList.addAll(films);
             }
         });
     }
 
     @Override
-    public void choose(int position) {
-       // this.position = position;
-//        filmList.get(position);
-        Log.d("ololo", "choose");
+    public void choose(String id) {
         Intent intent = new Intent(this, DescriptionActivity.class);
-        intent.putExtra("filmList", filmList.get(position));
-
-//        intent.putExtra("id", filmList.get(position).getTitle());
-//        intent.putExtra("title", filmList.get(position).getTitle());
-//        intent.putExtra("director", filmList.get(position).getDirector());
-//        intent.putExtra("release_date", filmList.get(position).getReleaseDate());
-//        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.putExtra("id", id);
         startActivity(intent);
-
     }
 }

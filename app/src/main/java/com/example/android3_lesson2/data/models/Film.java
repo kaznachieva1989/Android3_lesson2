@@ -4,11 +4,12 @@ package com.example.android3_lesson2.data.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.io.Serializable;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Film implements Parcelable {
+public class Film {
 
     @SerializedName("id")
     @Expose
@@ -152,15 +153,5 @@ public class Film implements Parcelable {
 
     public void setLength(Object length) {
         this.length = length;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-
     }
 }

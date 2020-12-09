@@ -32,23 +32,9 @@ public class GhibliService {
     public Call<List<Film>> getFilms() {
         return ghibliApi.getFilms();
     }
-//    private GhibliService() {
-//    }
-    //   public static GhibliApi getInstance() {
-//        if (ghibliApi == null) {
-//            ghibliApi = buildRetrofit();
-//        }
-//        return ghibliApi;
-//    }
-//
-//    private static GhibliApi buildRetrofit() {
-//        return new Retrofit.Builder()
-//                .baseUrl(BASE_URL)
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build().create(GhibliApi.class);
-//    }
-//
-//    public Call<List<Film>> getFilms(){
-//        return ghibliApi.getFilms();
-//    }
+
+    public Call<Film> getFilm(String id) {
+        return ghibliApi.getFilmById(id);
+    }
+
 }
